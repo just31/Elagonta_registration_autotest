@@ -1,10 +1,14 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 
 @pytest.fixture(scope="session")
 def browser():
-    driver = webdriver.Chrome()
+    options = Options()
+    options.add_argument('--headless')
+
+    driver = webdriver.Chrome(options=options)
     # Открываем браузер во весь экран.
     driver.maximize_window()
     # Используем конструкцию yield, которая разделяет функцию browser() на часть — до тестов и после тестов.

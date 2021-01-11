@@ -11,7 +11,7 @@ Installing dependencies:
 
 
 ## View reports in allure
-    allure serve output/allure
+    allure serve reports/allure
 
 Learn more about how to configure allure - https://github.com/allure-framework/allure2
 
